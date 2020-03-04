@@ -3,6 +3,53 @@
   padding: 0;
 }
 
-.item.active > p {
-  display: none;
+html {
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.accordion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(0,0,0, .2);
+  border-top: none;
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 477px;
+}
+
+  .item > p {
+    z-index: -1000;
+    position: absolute;
+    top: 100vh;
+    left: 100vw;
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  .item.active > p {
+    opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+    .item > a {
+      display: block;
+      border-top: 1px solid rgba(0,0,0, .2);
+      border-bottom: 1px solid rgba(0,0,0, .2);
+
+      text-decoration: none;
+      padding: 10px 20px;
+
+      background-color: #F7F7F7;
+
+      color: #4F7BFF;
+    }
+
+    .item > p {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
