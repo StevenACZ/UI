@@ -64,7 +64,7 @@ html {
 /*MODAL*/
 .modal {
   position: fixed;
-  top: -100vh;
+  top: -35vh;
   left: 50%;
 
   transform: translateX(-50%);
@@ -75,6 +75,7 @@ html {
 
   transition: all .5s;
   background-color: white;
+  opacity: 0;
 }
 
   .modal.active {
@@ -83,6 +84,7 @@ html {
     left: 50%;
     
     transform: translate(-50%, -8%);
+    opacity: 1;
   }
 
   .modal__header {

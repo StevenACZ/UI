@@ -30,55 +30,42 @@ Modal.prototype.registerEvents = function(callbackClose, callbackAccept, callbac
   })
 }
 
-let modal_1 = new Modal('.js_modal_1',function() {
+function removeClass() {
   openModalBtn_1.classList.remove('active');
   openModalBtn_2.classList.remove('active');
   openModalBtn_3.classList.remove('active');
   container.classList.remove('active');
+}
+
+function addClass() {
+  openModalBtn_1.classList.add('active');
+  openModalBtn_2.classList.add('active');
+  openModalBtn_3.classList.add('active');
+  container.classList.add('active');
+}
+
+let modal_1 = new Modal('.js_modal_1', function() {
+  removeClass();
 }, function() {
-  openModalBtn_1.classList.remove('active');
-  openModalBtn_2.classList.remove('active');
-  openModalBtn_3.classList.remove('active');
-  container.classList.remove('active');
+  removeClass();
 }, function() {
-  openModalBtn_1.classList.remove('active');
-  openModalBtn_2.classList.remove('active');
-  openModalBtn_3.classList.remove('active');
-  container.classList.remove('active');
+  removeClass();
 });
 
-let modal_2 = new Modal('.js_modal_2',function() {
-  openModalBtn_1.classList.remove('active');
-  openModalBtn_2.classList.remove('active');
-  openModalBtn_3.classList.remove('active');
-  container.classList.remove('active');
+let modal_2 = new Modal('.js_modal_2', function() {
+  removeClass();
 }, function() {
-  openModalBtn_1.classList.remove('active');
-  openModalBtn_2.classList.remove('active');
-  openModalBtn_3.classList.remove('active');
-  container.classList.remove('active');
+  removeClass();
 }, function() {
-  openModalBtn_1.classList.remove('active');
-  openModalBtn_2.classList.remove('active');
-  openModalBtn_3.classList.remove('active');
-  container.classList.remove('active');
+  removeClass();
 });
 
-let modal_3 = new Modal('.js_modal_3',function() {
-  openModalBtn_1.classList.remove('active');
-  openModalBtn_2.classList.remove('active');
-  openModalBtn_3.classList.remove('active');
-  container.classList.remove('active');
+let modal_3 = new Modal('.js_modal_3', function() {
+  removeClass();
 }, function() {
-  openModalBtn_1.classList.remove('active');
-  openModalBtn_2.classList.remove('active');
-  openModalBtn_3.classList.remove('active');
-  container.classList.remove('active');
+  removeClass();
 }, function() {
-  openModalBtn_1.classList.remove('active');
-  openModalBtn_2.classList.remove('active');
-  openModalBtn_3.classList.remove('active');
-  container.classList.remove('active');
+  removeClass();
 });
 
 let openModalBtn_1 = document.querySelector('.openModal_1');
@@ -88,24 +75,15 @@ let container = document.querySelector('.container');
 
 openModalBtn_1.addEventListener('click', function() {
   modal_1.open();
-  container.classList.add('active');
-  openModalBtn_1.classList.add('active');
-  openModalBtn_2.classList.add('active');
-  openModalBtn_3.classList.add('active');
+  addClass()
 })
 
 openModalBtn_2.addEventListener('click', function() {
   modal_2.open();
-  container.classList.add('active');
-  openModalBtn_1.classList.add('active');
-  openModalBtn_2.classList.add('active');
-  openModalBtn_3.classList.add('active');
+  addClass()
 })
 
 openModalBtn_3.addEventListener('click', function() {
   modal_3.open();
-  container.classList.add('active');
-  openModalBtn_1.classList.add('active');
-  openModalBtn_2.classList.add('active');
-  openModalBtn_3.classList.add('active');
+  addClass()
 })
