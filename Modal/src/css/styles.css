@@ -36,12 +36,29 @@ html {
   background-color: #5A6268;
 }
 
+/*CONTAINER*/
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  transition: all .15s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.active {
+  background-color: rgba(0,0,0,.2);
+}
+
 /*OPEN MODAL BUTTON*/
 .openModal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-bottom: 10px;
+}
+
+.openModal.active {
+  z-index: -1;
 }
 
 /*MODAL*/
@@ -54,9 +71,10 @@ html {
   
   width: 500px;
   border: 1px solid rgba(0,0,0,.2);
-  border-radius: 4px;
+  border-radius: 6px;
 
   transition: all .5s;
+  background-color: white;
 }
 
   .modal.active {
