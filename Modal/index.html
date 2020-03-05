@@ -8,22 +8,25 @@
 </head>
 <body>
   
-  <div class="modal">
+  <div class="modal js_modal_1">
     <div class="modal__header">
       <h2>Modal title</h2>
-      <span>X</span>
+      <span class="js_close">X</span>
     </div>
 
     <div class="modal__body">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus similique, nemo perspiciatis deserunt fuga quo earum dolore dolorem! Consequuntur facere cumque tempora eligendi temporibus. Cumque explicabo accusantium vitae aperiam molestias.
+        Woohoo, you're reading this text in a modal!
       </p>
     </div>
 
     <div class="modal__footer">
-      
+      <button class="btn btn--secondary js_accept">Accept</button>
+      <button class="btn btn--primary js_cancel">Cancel</button>
     </div>
   </div>
+
+  <button class="btn btn--primary openModal">Launch demo modal</button>
 
   <script src="./src/js/app.js"></script>
 </body>
